@@ -18,7 +18,6 @@
             line-height: 1.6;
         }
 
-        /* Header Navigation */
         header {
             position: fixed;
             top: 0;
@@ -69,7 +68,6 @@
             color: #ff4757;
         }
 
-        /* Page Container */
         .page {
             display: none;
             min-height: 100vh;
@@ -86,7 +84,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Hero Section */
         .hero {
             min-height: calc(100vh - 180px);
             display: flex;
@@ -131,13 +128,13 @@
 
         .hero-images {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr;
             gap: 1rem;
         }
 
         .hero-images img {
             width: 100%;
-            height: 250px;
+            height: 400px;
             object-fit: cover;
             border-radius: 12px;
             transition: transform 0.3s;
@@ -149,7 +146,6 @@
             transform: scale(1.05) translateY(-10px);
         }
 
-        /* Content Sections */
         .content-wrapper {
             max-width: 1400px;
             margin: 0 auto;
@@ -176,7 +172,6 @@
             background: linear-gradient(90deg, #ff4757, transparent);
         }
 
-        /* About Section */
         .about-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -252,7 +247,6 @@
             box-shadow: 0 10px 25px rgba(255, 71, 87, 0.4);
         }
 
-        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -286,7 +280,6 @@
             line-height: 1.7;
         }
 
-        /* Experience Timeline */
         .timeline {
             position: relative;
             padding-left: 3rem;
@@ -362,7 +355,6 @@
             margin-bottom: 0.8rem;
         }
 
-        /* Achievements Grid */
         .achievements-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -396,7 +388,6 @@
             font-size: 0.9rem;
         }
 
-        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -459,7 +450,55 @@
             color: #ff6b81;
         }
 
-        /* Contact Section */
+        /* Testimonial specific styling */
+        .testimonial-card {
+            background: linear-gradient(135deg, #151515, #1a1a1a);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #222;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 8rem;
+            color: #ff4757;
+            opacity: 0.1;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-card:hover {
+            border-color: #ff4757;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 71, 87, 0.2);
+        }
+
+        .testimonial-text {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            color: #ff4757;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .testimonial-role {
+            color: #777;
+            font-size: 0.85rem;
+        }
+
         .contact-container {
             max-width: 800px;
             margin: 0 auto;
@@ -512,7 +551,6 @@
             box-shadow: 0 5px 15px rgba(255, 71, 87, 0.2);
         }
 
-        /* Footer */
         footer {
             background: #151515;
             padding: 2rem 5%;
@@ -525,7 +563,6 @@
             color: #777;
         }
 
-        /* Subsection Headers */
         .subsection-header {
             margin: 4rem 0 2rem;
         }
@@ -542,7 +579,6 @@
             background: #ff4757;
         }
 
-        /* Responsive */
         @media (max-width: 968px) {
             .hero-content,
             .about-grid {
@@ -616,9 +652,7 @@
                     <p>Author of AWS Security Series with 1M+ impressions on Twitter. Published articles for Detectify, ProjectDiscovery, Trickest, WPSec, and Spearbit.</p>
                 </div>
                 <div class="hero-images">
-                    <img src="Devansh Bordia_PhonePe_Photo.jpg" alt="Profile 1">
-                    <img src="Devansh Bordia_PhonePe_Photo.jpg" alt="Profile 2">
-                    <img src="Devansh Bordia_PhonePe_Photo.jpg" alt="Profile 3">
+                    <img src="Devansh Bordia_PhonePe_Photo.jpg" alt="Devansh Bordia">
                 </div>
             </div>
         </div>
@@ -653,7 +687,7 @@
                     </div>
                     <div class="stat-item">
                         <div class="stat-label">Vulnerabilities</div>
-                        <div class="stat-value">500+</div>
+                        <div class="stat-value">1000+</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-label">CVEs Published</div>
@@ -763,11 +797,6 @@
                 <div class="line"></div>
             </div>
 
-            <div class="subsection-header">
-    <h3>Testimonials</h3>
-    <div class="line"></div>
-</div>
-
             <div class="achievements-grid">
                 <div class="achievement-card"><h4>MasterCard</h4></div>
                 <div class="achievement-card"><h4>Gusto</h4></div>
@@ -778,16 +807,27 @@
                 <div class="achievement-card"><h4>Xfinity</h4></div>
                 <div class="achievement-card"><h4>Sophos</h4></div>
             </div>
+
+            <div class="subsection-header">
+                <h3>Testimonials</h3>
+                <div class="line"></div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Devansh is one of the sharpest security researchers I've worked with. Deep technical knowledge, real world offensive experience, and someone who takes the work seriously. Would recommend to any SaaS founder who wants genuine security — not a checkbox exercise."</p>
+                    <div class="testimonial-author">Luke Stephens (hakluke)</div>
+                    <div class="testimonial-role">Founder, Haksec.io & HackerContent.com</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I have had the opportunity to collaborate with Devansh on multiple pentesting projects for clients worldwide, and I can confidently say that he is deeply committed to his work. He constantly challenges himself and is always focused on continuous learning and improvement. I particularly remember the first project we worked on together through Strike, which turned out to be one of the most successful engagements I have been part of. Together, we reported a significant number of high-impact vulnerabilities for the client. Without a doubt, Devansh is not only an outstanding professional but also an exceptional colleague. His collaborative approach allows those around him to continuously learn from him and ensures the successful delivery of every project he undertakes."</p>
+                    <div class="testimonial-author">Yesenia Trejo</div>
+                    <div class="testimonial-role">Lead Security Engineer, Strike</div>
+                </div>
+            </div>
+
         </div>
     </div>
-
-    <div class="projects-grid">
-    <div class="project-card">
-        <p style="color: #ccc; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">"Devansh is one of the sharpest security researchers I've worked with. Deep technical knowledge, real world offensive experience, and someone who takes the work seriously. Would recommend Zarqen to any SaaS founder who wants genuine security — not a checkbox exercise."</p>
-        <h3 style="font-size: 1rem;">Luke Stephens (hakluke)</h3>
-        <p style="color: #777; font-size: 0.9rem;">Founder, Haksec.io & HackerContent.com</p>
-    </div>
-</div>
 
     <!-- WORK PAGE -->
     <div id="work" class="page">
@@ -926,9 +966,9 @@
 
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/devanshbordia/" target="_blank">LinkedIn</a>
-                    <a href="https://twitter.com/devansh3008" target="_blank">Twitter</a>
+                    <a href="https://twitter.com/devansh_bordia" target="_blank">Twitter</a>
                     <a href="https://github.com/devansh3008" target="_blank">GitHub</a>
-                    <a href="https://bugcrowd.com/anglecutter/" target="_blank">Bugcrowd</a>
+                    <a href="https://bugcrowd.com/h/Devansh-Bordia" target="_blank">Bugcrowd</a>
                 </div>
             </div>
         </div>
@@ -940,15 +980,12 @@
 
     <script>
         function showPage(pageId, el = null) {
-            // Hide all pages
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => page.classList.remove('active'));
 
-            // Remove active class from all nav links
             const navLinks = document.querySelectorAll('nav a');
             navLinks.forEach(link => link.classList.remove('active'));
 
-            // Show selected page (if exists)
             const targetPage = document.getElementById(pageId);
             if (targetPage) {
                 targetPage.classList.add('active');
@@ -957,11 +994,9 @@
                 return;
             }
 
-            // Add active class to clicked nav link
             if (el) {
                 el.classList.add('active');
             } else {
-                // Auto-detect correct nav link if loaded from URL hash
                 navLinks.forEach(link => {
                     if (link.getAttribute("onclick")?.includes(pageId)) {
                         link.classList.add('active');
@@ -969,14 +1004,10 @@
                 });
             }
 
-            // Scroll to top smoothly
             window.scrollTo({ top: 0, behavior: "smooth" });
-
-            // Update URL hash
             history.replaceState(null, null, "#" + pageId);
         }
 
-        // Enable hash navigation on load
         window.addEventListener("DOMContentLoaded", () => {
             const hash = window.location.hash.replace("#", "");
             if (hash) {
